@@ -1,0 +1,56 @@
+version: "2"
+checks:
+  argument-count:
+    enabled: true
+  complex-logic:
+    enabled: true
+  file-lines:
+    enabled: true
+  identical-code:
+    enabled: true
+  method-complexity:
+    enabled: true
+  method-count:
+    enabled: true
+  method-lines:
+    enabled: true
+  nested-control-flow:
+    enabled: true
+  return-statements:
+    enabled: true
+  similar-code:
+    enabled: true
+plugins:
+  phpmd:
+    enabled: true
+    config:
+      file_extensions: "php"
+      rulesets: "phpmd_ruleset.xml"
+  phpcodesniffer:
+    enabled: true
+    channel: beta
+    config:
+      file_extensions: "php"
+      standard: "phpcs_base_ruleset.xml"
+      ignore_warnings: true
+exclude_patterns:
+  - ".git/"
+  - ".idea/"
+  - ".gitlab/"
+  - ".hooks/"
+  - "bootstrap/"
+  - "config/"
+  - "runtime/"
+  - "database/"
+  - "migrations/"
+  - "envs/"
+  - "public/"
+  - "routes/"
+  - "storage/"
+  - "tests/"
+  - "**/vendor/"
+  - "**/node_modules/"
+  - "**/tests/"
+  - "**/migrations/"
+  - "**/config/"
+  - "**/*.config.js"
